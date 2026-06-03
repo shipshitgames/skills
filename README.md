@@ -6,10 +6,11 @@ Built and battle-tested live on the **shipshitshow** YouTube channel.
 ## Install
 
 ```bash
-npx skills add shipshitgames/skills
+npx skills add shipshitgames/skills              # all of them
+npx skills add shipshitgames/skills --skill fps-arena   # just one
 ```
 
-Or drop any skill folder into your project's `.claude/skills/` (and `.codex/skills/`).
+Or copy a skill folder from `skills/` into your project's `.claude/skills/` (and `.codex/skills/`).
 
 ## What's in here
 
@@ -20,18 +21,31 @@ generates code that fits the `@shipshit/engine` conventions instead of generic
 Three.js spaghetti.
 
 ### Foundation
-- **[shipshit-engine](./shipshit-engine)** — the core architecture every game follows. Load this first.
-- **[vibe-game-workflow](./vibe-game-workflow)** — idea → TinyPRD → build feature-by-feature → test → ship.
+- **[shipshit-engine](./skills/shipshit-engine)** — the core architecture every game follows. Load this first.
+- **[vibe-game-workflow](./skills/vibe-game-workflow)** — idea → TinyPRD → build feature-by-feature → test → ship.
 
 ### Genres
-- **[fps-arena](./fps-arena)** — first-person, DOOM-like horde / survivors shooter.
-- **[tower-defense-3d](./tower-defense-3d)** — 3D tower defense on the same engine.
-- **[isometric-3d](./isometric-3d)** — orthographic isometric games (tactics, builders, crawlers).
+- **[fps-arena](./skills/fps-arena)** — first-person, DOOM-like horde / survivors shooter.
+- **[tower-defense-3d](./skills/tower-defense-3d)** — 3D tower defense on the same engine.
+- **[isometric-3d](./skills/isometric-3d)** — orthographic isometric games (tactics, builders, crawlers).
 
 ### Systems
-- **[partykit-multiplayer](./partykit-multiplayer)** — real-time multiplayer on PartyKit / Cloudflare.
-- **[game-asset-pipeline](./game-asset-pipeline)** — `assets.json` manifest + AI gen → optimize → register.
-- **[playwright-game-testing](./playwright-game-testing)** — give the agent eyes: screenshot, assert, self-fix.
+- **[partykit-multiplayer](./skills/partykit-multiplayer)** — real-time multiplayer on PartyKit / Cloudflare.
+- **[game-asset-pipeline](./skills/game-asset-pipeline)** — `assets.json` manifest + AI gen → optimize → register.
+- **[playwright-game-testing](./skills/playwright-game-testing)** — give the agent eyes: screenshot, assert, self-fix.
+
+## Repo layout
+
+```
+skills/     the published game-dev skills (SKILL.md + optional reference/)
+.agents/    operating system for working on this repo (memory, standards, meta-skills)
+.claude/    symlinks → .agents/{memory,skills}
+.codex/     symlinks → .agents/{memory,skills} + instructions.md
+```
+
+For general-purpose dev skills (TypeScript, React, Turborepo, shadcn, Next.js, testing),
+see the sibling library **[shipshitdev/skills](https://github.com/shipshitdev/skills)** —
+the studio monorepo pulls its working skills from there.
 
 ## Open core
 

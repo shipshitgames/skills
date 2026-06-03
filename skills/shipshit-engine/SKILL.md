@@ -2,6 +2,10 @@
 name: shipshit-engine
 description: The foundational @shipshit/engine architecture every Ship Shit Games title follows — the Game orchestrator + GameContext + GameSystems registry, the system folder layout, data-driven content, the rAF loop, dispose discipline, and the React-shell-for-HUD boundary. Load this FIRST when starting a new studio game or adding/extending any system in an existing one.
 license: MIT
+metadata:
+  version: "0.1.0"
+  tags: "game-engine, three.js, architecture, ecs, typescript"
+  author: Ship Shit Games
 ---
 
 # shipshit-engine

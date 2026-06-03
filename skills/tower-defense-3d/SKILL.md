@@ -2,6 +2,10 @@
 name: tower-defense-3d
 description: Build a 3D tower-defense game (creeps walk a lane, you place towers on a grid to stop them) on the Ship Shit engine, matching the FPS's neon-arena look. Use when adding a TD mode/game with an RTS-style angled or orthographic camera (NOT pointer-lock), raycast click-to-place on a grid, gold/build economy, waypoint creep pathing, and a wave director.
 license: MIT
+metadata:
+  version: "0.1.0"
+  tags: "tower-defense, three.js, strategy, game-dev"
+  author: Ship Shit Games
 ---
 
 # tower-defense-3d

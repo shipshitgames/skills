@@ -2,6 +2,10 @@
 name: playwright-game-testing
 description: Give a coding agent eyes on a Ship Shit browser game — boot the Vite dev server, drive the imperative-Three.js game with Playwright (click-to-pointer-lock, WASD/mouse/keys), screenshot the WebGL canvas, assert on HUD state, diff screenshots across runs, and run an autonomous screenshot→diagnose→fix→re-screenshot loop. Use whenever you need to verify a visual/gameplay change, reproduce a visual bug, or self-correct without a human looking at the screen.
 license: MIT
+metadata:
+  version: "0.1.0"
+  tags: "testing, playwright, visual-testing, game-dev"
+  author: Ship Shit Games
 ---
 
 # Playwright Game Testing — giving the agent eyes

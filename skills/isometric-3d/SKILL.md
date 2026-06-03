@@ -2,6 +2,10 @@
 name: isometric-3d
 description: Build a 3D isometric game (tactics, base-builder, dungeon-crawler) on the Ship Shit engine — orthographic iso camera, tile/grid model, pointer raycast to tile (click-to-select/move), draw-order/depth, camera pan/zoom/rotate, and A* pathfinding. Use when starting or extending any grid-based top-down-3D game.
 license: MIT
+metadata:
+  version: "0.1.0"
+  tags: "isometric, three.js, tactics, pathfinding, game-dev"
+  author: Ship Shit Games
 ---
 
 # Isometric 3D foundation

@@ -2,6 +2,10 @@
 name: partykit-multiplayer
 description: Add real-time multiplayer to a studio Three.js game using PartyKit (Cloudflare) — write the room server, the typed NetClient, remote-avatar interpolation, room codes/share links, and the dev/deploy workflow. Use whenever a game needs networked PvP, shared rooms, or a "join a friend" feature.
 license: MIT
+metadata:
+  version: "0.1.0"
+  tags: "multiplayer, netcode, partykit, cloudflare, websockets"
+  author: Ship Shit Games
 ---
 
 # PartyKit multiplayer

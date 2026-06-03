@@ -2,6 +2,10 @@
 name: fps-arena
 description: Build first-person arena shooters in the Ship Shit engine — DOOM-style billboard sprite enemies, PointerLockControls eye-height camera, hitscan + projectile weapons, AABB+radius collision, the wave/PvE director, boss ability cycles, and the Vampire-Survivors mode (XP draft, orbit/bolt/nova auto-weapons, run meta-progression). Use when adding or editing FPS combat, enemies, weapons, waves, bosses, or the survivors/level-up systems in a studio FPS game.
 license: MIT
+metadata:
+  version: "0.1.0"
+  tags: "fps, shooter, survivors, three.js, game-dev"
+  author: Ship Shit Games
 ---
 
 # FPS Arena

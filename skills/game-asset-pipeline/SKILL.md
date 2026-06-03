@@ -2,6 +2,10 @@
 name: game-asset-pipeline
 description: Use when generating, optimizing, or wiring 3D models/sprites/textures/audio into a Ship Shit Games title — defines the assets.json manifest as the single source of truth, the loader that reads it, the AI generation toolbox per asset type, and the mandatory per-asset license record.
 license: MIT
+metadata:
+  version: "0.1.0"
+  tags: "assets, asset-pipeline, ai-generation, gltf, sprites"
+  author: Ship Shit Games
 ---
 
 # Game asset pipeline

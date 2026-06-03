@@ -2,6 +2,10 @@
 name: vibe-game-workflow
 description: Ship Shit Games' end-to-end methodology for vibe-coding a 3D browser game with Claude/Codex from idea to deployed — write a TinyPRD, plan-first, build feature-by-feature in dependency order, playtest after each feature, then ship to Vercel + PartyKit. Use this to orchestrate a whole game build or decide which sibling skill to load next.
 license: MIT
+metadata:
+  version: "0.1.0"
+  tags: "workflow, game-dev, methodology, planning"
+  author: Ship Shit Games
 ---
 
 # Vibe Game Workflow
