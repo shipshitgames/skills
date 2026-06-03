@@ -1,0 +1,77 @@
+{
+  "$comment": "Ship Shit Games asset manifest. SINGLE SOURCE OF TRUTH. Code never hardcodes paths or frame sizes — it reads ids from here. Generated/edited by humans, validated at load. Keep `license` on EVERY entry: raw AI output is not US-copyrightable and tool terms shift monthly.",
+  "version": 3,
+  "assets": [
+    {
+      "id": "enemy-melee",
+      "type": "sprite",
+      "path": "sprites/enemy-melee.webp",
+      "dimensions": [512, 512],
+      "anchor": [0.5, 0.0],
+      "views": {
+        "front": { "path": "sprites/enemy-melee.webp", "scale": [1.65, 2.18] },
+        "side": { "path": "sprites/enemy-melee-side.webp", "scale": [1.48, 2.18] },
+        "back": { "path": "sprites/enemy-melee-back.webp", "scale": [1.58, 2.18] }
+      },
+      "license": { "tool": "PixelLab", "plan": "Pro", "date": "2026-05-30", "kind": "ai-2d-sprite" }
+    },
+    {
+      "id": "enemy-walk",
+      "type": "sprite-anim",
+      "path": "sprites/enemy-walk.webp",
+      "dimensions": [1024, 256],
+      "frames": 4,
+      "frameSize": [256, 256],
+      "fps": 8,
+      "loop": true,
+      "anchor": [0.5, 0.0],
+      "license": { "tool": "Scenario", "plan": "Team", "date": "2026-05-31", "kind": "ai-2d-anim" }
+    },
+    {
+      "id": "weapon-rifle",
+      "type": "sprite",
+      "path": "sprites/weapon-rifle.webp",
+      "dimensions": [512, 512],
+      "scale": [0.56, 0.65],
+      "flashScale": 0.85,
+      "anchor": [0.5, 0.5],
+      "license": { "tool": "PixelLab", "plan": "Pro", "date": "2026-05-30", "kind": "ai-2d-sprite" }
+    },
+    {
+      "id": "arena-floor",
+      "type": "texture",
+      "path": "textures/arena-floor.webp",
+      "dimensions": [1024, 1024],
+      "colorSpace": "srgb",
+      "wrap": "repeat",
+      "repeat": [8, 8],
+      "license": { "tool": "Leonardo", "plan": "Apprentice", "date": "2026-05-29", "kind": "ai-texture" }
+    },
+    {
+      "id": "boss-mech",
+      "type": "model",
+      "path": "models/boss-mech.glb",
+      "optimized": true,
+      "compression": { "geometry": "draco", "textures": "ktx2" },
+      "animations": ["idle", "walk", "slam"],
+      "license": { "tool": "Meshy", "plan": "Pro", "date": "2026-05-28", "kind": "ai-3d-model", "rig": "Mixamo" }
+    },
+    {
+      "id": "sfx-shoot-rifle",
+      "type": "audio",
+      "path": "audio/sfx/shoot-rifle.webm",
+      "category": "sfx",
+      "volume": 0.7,
+      "license": { "tool": "ElevenLabs", "plan": "Creator", "date": "2026-05-30", "kind": "ai-sfx", "scope": "perpetual-commercial" }
+    },
+    {
+      "id": "music-arena-loop",
+      "type": "audio",
+      "path": "audio/music/arena-loop.webm",
+      "category": "music",
+      "loop": true,
+      "volume": 0.5,
+      "license": { "tool": "Soundraw", "plan": "Creator", "date": "2026-05-27", "kind": "music", "scope": "perpetual-commercial" }
+    }
+  ]
+}
