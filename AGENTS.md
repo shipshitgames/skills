@@ -16,7 +16,7 @@ games** with Claude Code + Codex. Battle-tested live on the **shipshitshow** You
 - `version`/`tags` go inside the `metadata:` block as quoted strings, never top-level
 - No `auto_activate`, `auto_trigger`, or `risk` fields
 - Every skill teaches the `@shipshit/engine` conventions (imperative Three.js + the
-  `GameContext`/`GameSystems` registry), grounded in the canonical `fpsdemo`
+  `GameContext`/`GameSystems` registry), grounded in the canonical `scourge-survivors`
 - Conventional commits (`feat:`, `fix:`, `refactor:`, `chore:`); never commit secrets
 
 ## Before editing skills

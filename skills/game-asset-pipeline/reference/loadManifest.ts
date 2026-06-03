@@ -9,7 +9,7 @@ import manifest from '../assets/assets.json'
  * touches the filesystem/network for content. Systems ask the catalog for an id
  * and get back a ready-to-use texture/model + its metadata (scale, frames, anchor).
  *
- * This will move into @shipshit/engine; fpsdemo proves the shape. Today the game
+ * This will move into @shipshit/engine; scourge-survivors proves the shape. Today the game
  * uses per-file Vite imports (src/game/spriteAssets.ts) — the manifest replaces that.
  */
 

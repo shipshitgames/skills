@@ -10,7 +10,7 @@ metadata:
 
 # shipshit-engine
 
-The architecture that EVERY studio game shares. Imperative Three.js for the game, React + Tailwind only for the HUD/menu shell. This is the skeleton `@shipshit/engine` will encode; the proof implementation is `fpsdemo` (cited throughout). Read those files before writing — match them exactly.
+The architecture that EVERY studio game shares. Imperative Three.js for the game, React + Tailwind only for the HUD/menu shell. This is the skeleton `@shipshit/engine` will encode; the proof implementation is `scourge-survivors` (cited throughout). Read those files before writing — match them exactly.
 
 ## The three pillars
 
@@ -222,7 +222,7 @@ HudSystem builds the snapshot from `ctx` and calls `ctx.listener(snapshot)`. Thr
 
 ## Dispose / teardown discipline
 
-`dispose()` (`Game.ts`) must fully unwind a mount; React StrictMode/HMR/route changes WILL call it. The order in fpsdemo:
+`dispose()` (`Game.ts`) must fully unwind a mount; React StrictMode/HMR/route changes WILL call it. The order in scourge-survivors:
 
 ```ts
 dispose() {

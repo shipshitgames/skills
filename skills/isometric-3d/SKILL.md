@@ -20,8 +20,8 @@ helpers converts between tile / world / screen space.
 This skill assumes the studio engine architecture (`GameContext` + `GameSystems`
 registry, imperative Three.js, React HUD via `StateListener`). See
 **shipshit-engine** for that shape. Read the canonical FPS proof for the system
-pattern: `fpsdemo/src/game/context.ts`, `fpsdemo/src/game/render/RenderSystem.ts`,
-`fpsdemo/src/game/data/maps.ts`.
+pattern: `scourge-survivors/src/game/context.ts`, `scourge-survivors/src/game/render/RenderSystem.ts`,
+`scourge-survivors/src/game/data/maps.ts`.
 
 The FPS uses a `PerspectiveCamera` + `PointerLockControls`; an iso game swaps
 both out for an `OrthographicCamera` + a custom `IsoCameraSystem`. Everything

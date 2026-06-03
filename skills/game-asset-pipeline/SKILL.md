@@ -24,7 +24,7 @@ files directly into systems.
 
 ## Why a manifest (the sprite-frame bug class)
 
-In the current fpsdemo the metadata is scattered: textures are imported one-by-one
+In the current scourge-survivors the metadata is scattered: textures are imported one-by-one
 in `src/game/spriteAssets.ts`, weapon scales live in `src/game/data/internalTypes.ts`
 (`WEAPON_SPRITE_CONFIG`), and enemy per-view scales are hardcoded inline in
 `src/game/entities/Enemy.ts` (`spriteScale()`). That fragmentation is exactly what
@@ -38,7 +38,7 @@ the manifest fixes. When the size/frame data lives next to the path:
 - Anchor, color space, and wrap mode are declared once, not re-set at every call site.
 - Every asset carries a `license` record (see below).
 
-`@shipshit/engine` will export the `AssetCatalog`; fpsdemo is the proof. New games
+`@shipshit/engine` will export the `AssetCatalog`; scourge-survivors is the proof. New games
 start manifest-first.
 
 ## File layout

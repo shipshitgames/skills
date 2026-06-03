@@ -23,12 +23,12 @@ The networked game mode is a normal system in `modes/` (see `fps-arena`): it own
 `NetClient`, maps server messages onto the world, and pushes scoreboard state to the HUD.
 
 Canonical implementation — read these before writing:
-- `fpsdemo/party/arena.ts` — authoritative-ish PvP room server
-- `fpsdemo/src/net/NetClient.ts` — typed event-interface client + throttling
-- `fpsdemo/src/net/RemoteAvatar.ts` — interpolation + billboard nametag/health
-- `fpsdemo/src/net/playerAvatars.ts` — slot colors / avatar ids (shared by client + server)
-- `fpsdemo/src/game/modes/MultiplayerSystem.ts` — how a system drives the net layer
-- `fpsdemo/partykit.json`, `fpsdemo/DEPLOY.md`, `fpsdemo/package.json` — config + workflow
+- `scourge-survivors/party/arena.ts` — authoritative-ish PvP room server
+- `scourge-survivors/src/net/NetClient.ts` — typed event-interface client + throttling
+- `scourge-survivors/src/net/RemoteAvatar.ts` — interpolation + billboard nametag/health
+- `scourge-survivors/src/net/playerAvatars.ts` — slot colors / avatar ids (shared by client + server)
+- `scourge-survivors/src/game/modes/MultiplayerSystem.ts` — how a system drives the net layer
+- `scourge-survivors/partykit.json`, `scourge-survivors/DEPLOY.md`, `scourge-survivors/package.json` — config + workflow
 
 ## File layout
 

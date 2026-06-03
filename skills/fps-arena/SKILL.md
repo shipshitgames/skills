@@ -11,7 +11,7 @@ metadata:
 # FPS Arena
 
 First-person arena shooter built on imperative Three.js. The canonical implementation is
-`fpsdemo`. Everything here is grounded in real code — read the cited file before changing it.
+`scourge-survivors`. Everything here is grounded in real code — read the cited file before changing it.
 
 This skill assumes the engine conventions from **shipshit-engine** (GameContext + GameSystems
 registry, `new XSystem(ctx, sys)`, siblings via `this.sys.<name>`, data-driven `constants.ts` +

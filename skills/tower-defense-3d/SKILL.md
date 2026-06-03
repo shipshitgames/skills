@@ -59,7 +59,7 @@ src/game/
 
 ## GameContext additions
 
-Anything two systems touch lives on `ctx` (see `fpsdemo/src/game/context.ts`). For TD, the camera is plain (no `controls`), and we add the economy + grid + creep pool. Keep per-system state (wave counters, tower list) private on the system.
+Anything two systems touch lives on `ctx` (see `scourge-survivors/src/game/context.ts`). For TD, the camera is plain (no `controls`), and we add the economy + grid + creep pool. Keep per-system state (wave counters, tower list) private on the system.
 
 ```ts
 // context.ts (TD-specific fields; rest mirrors the FPS context)
@@ -142,7 +142,7 @@ export const TOWERS: Record<TowerId, TowerSpec> = {
 export const TOWER_ORDER: TowerId[] = ['arrow', 'frost', 'cannon']
 ```
 
-Lanes live on the map (reusing the FPS `ArenaMap` shape — same theme/obstacles fields, plus a waypoint path and which cells are buildable). See `fpsdemo/src/game/data/maps.ts` for the theme/obstacle structure you extend.
+Lanes live on the map (reusing the FPS `ArenaMap` shape — same theme/obstacles fields, plus a waypoint path and which cells are buildable). See `scourge-survivors/src/game/data/maps.ts` for the theme/obstacle structure you extend.
 
 ```ts
 // data/maps.ts (extend the FPS ArenaMap)
@@ -359,7 +359,7 @@ export class TowerSystem {
 }
 ```
 
-`ProjectilesSystem` is the FPS pool with a `spawnTowerShot` entry that homes toward a creep instead of flying a straight enemy shot. The fly/expire/hit loop is identical to `fpsdemo/src/game/entities/ProjectilesSystem.ts` — on hit, call `creep.damage()` (and apply `slow`) instead of `player.damagePlayer()`.
+`ProjectilesSystem` is the FPS pool with a `spawnTowerShot` entry that homes toward a creep instead of flying a straight enemy shot. The fly/expire/hit loop is identical to `scourge-survivors/src/game/entities/ProjectilesSystem.ts` — on hit, call `creep.damage()` (and apply `slow`) instead of `player.damagePlayer()`.
 
 ## CreepPathSystem / Creep — waypoint lane following
 
@@ -466,7 +466,7 @@ onCreepDeath(c: Creep) {     // called by ProjectilesSystem when health hits 0
 
 ## WaveDirectorSystem — same shape as PveDirectorSystem
 
-Copy the timer/counter rhythm from `fpsdemo/src/game/modes/PveDirectorSystem.ts` (`waveActive`, `waveBreakTimer`, `spawnTimer`, `spawnedThisWave`, `completeWave`). The differences: spawn `Creep`s along the lane (not chasers near the player), and between waves the player is in `status: 'building'` (gold + build menu active), not fighting.
+Copy the timer/counter rhythm from `scourge-survivors/src/game/modes/PveDirectorSystem.ts` (`waveActive`, `waveBreakTimer`, `spawnTimer`, `spawnedThisWave`, `completeWave`). The differences: spawn `Creep`s along the lane (not chasers near the player), and between waves the player is in `status: 'building'` (gold + build menu active), not fighting.
 
 ```ts
 // modes/WaveDirectorSystem.ts (abridged — mirrors PveDirectorSystem)
@@ -537,7 +537,7 @@ export class WaveDirectorSystem {
 
 ## RTS camera (NOT pointer-lock)
 
-`RenderSystem.setupScene` builds the same lighting/fog as the FPS (see `fpsdemo/src/game/render/RenderSystem.ts`) but the camera is a fixed angled perspective looking down at the arena — no `PointerLockControls`. Drop the controls field from `ctx` entirely.
+`RenderSystem.setupScene` builds the same lighting/fog as the FPS (see `scourge-survivors/src/game/render/RenderSystem.ts`) but the camera is a fixed angled perspective looking down at the arena — no `PointerLockControls`. Drop the controls field from `ctx` entirely.
 
 ```ts
 // render/RenderSystem.ts — TD camera (angled top-down)
@@ -599,7 +599,7 @@ The React build menu (Tailwind v4 + Radix/shadcn, see `shipshit-engine` for the 
 
 ## HUD push
 
-Extend `HUDState` (see `fpsdemo/src/game/types.ts`) with TD fields and push from `HudSystem.emit` exactly as the FPS does — React renders the build menu + base/gold readout from the snapshot. Never let React read the game directly.
+Extend `HUDState` (see `scourge-survivors/src/game/types.ts`) with TD fields and push from `HudSystem.emit` exactly as the FPS does — React renders the build menu + base/gold readout from the snapshot. Never let React read the game directly.
 
 ```ts
 // types.ts additions
@@ -623,7 +623,7 @@ export interface HUDState {
 
 ## Game.ts loop wiring
 
-Mirror `fpsdemo/src/game/Game.ts`: construct ctx + every system, then run rAF. Per frame, when `status` is `building` or `wave`, update the world; the director's `updateWaves` already handles both phases.
+Mirror `scourge-survivors/src/game/Game.ts`: construct ctx + every system, then run rAF. Per frame, when `status` is `building` or `wave`, update the world; the director's `updateWaves` already handles both phases.
 
 ```ts
 private update(delta: number) {

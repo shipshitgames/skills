@@ -1,4 +1,4 @@
-// Condensed pattern from fpsdemo src/game/modes/SurvivorsSystem.ts — the
+// Condensed pattern from scourge-survivors src/game/modes/SurvivorsSystem.ts — the
 // Vampire-Survivors XP loop + 1-of-3 level-up draft. React renders the cards from
 // the HUD snapshot and calls pickUpgrade(id) when the player clicks one.
 import type { GameContext } from '../context'
