@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sprite Concept Batches"
+  short_description: "Generate and log lore-backed sprite concept batches."
+  default_prompt: "Generate a lore-backed sprite concept batch for the first roster."

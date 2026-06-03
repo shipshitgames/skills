@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sprite Asset Promotion"
+  short_description: "Promote approved sprite drafts into game-ready assets."
+  default_prompt: "Promote approved sprite drafts into the game asset folder and manifest."

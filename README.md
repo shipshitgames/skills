@@ -32,6 +32,8 @@ Three.js spaghetti.
 ### Systems
 - **[partykit-multiplayer](./skills/partykit-multiplayer)** — real-time multiplayer on PartyKit / Cloudflare.
 - **[game-asset-pipeline](./skills/game-asset-pipeline)** — `assets.json` manifest + AI gen → optimize → register.
+- **[sprite-concept-batches](./skills/sprite-concept-batches)** — lore-backed concept batches + prompt/history ledger.
+- **[sprite-asset-promotion](./skills/sprite-asset-promotion)** — promote approved sprite drafts into game-ready assets.
 - **[playwright-game-testing](./skills/playwright-game-testing)** — give the agent eyes: screenshot, assert, self-fix.
 
 ## Repo layout
@@ -45,7 +47,7 @@ skills/     the published game-dev skills (SKILL.md + optional reference/)
 
 For general-purpose dev skills (TypeScript, React, Turborepo, shadcn, Next.js, testing),
 see the sibling library **[shipshitdev/skills](https://github.com/shipshitdev/skills)** —
-the studio monorepo pulls its working skills from there.
+the studio repo pulls its working skills from there.
 
 ## Open core
 

@@ -1,4 +1,4 @@
-// Condensed pattern from scourge-survivors src/game/entities/Enemy.ts — a pooled DOOM-style
+// Condensed pattern from games/scourge-survivors src/game/entities/Enemy.ts — a pooled DOOM-style
 // billboard-sprite enemy. Front/side/back textures swap by movement-vs-camera
 // angle; invisible box meshes are the real hitscan colliders (headshots work).
 //

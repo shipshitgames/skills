@@ -14,7 +14,7 @@ The studio's master playbook. Every Ship Shit Games title is one Vite + TypeScri
 imperative Three.js repo, vibe-coded with Claude Code (Opus) + Codex, streamed on the
 shipshitshow. This skill is the orchestrator: it tells you what to do, in what order,
 and which sibling skill to load at each step. The proof is the FPS reference game at
-`scourge-survivors/` — cite it when in doubt.
+`games/scourge-survivors/` — cite it when in doubt.
 
 Read this top to bottom once, then drive the loop. Do NOT improvise architecture; every
 studio game shares the same shape so shared code can move into `@shipshit/engine`.
@@ -22,13 +22,13 @@ studio game shares the same shape so shared code can move into `@shipshit/engine
 ## The one architecture (identical in every game)
 
 - **Game** = thin orchestrator. Builds a `GameContext` + a `GameSystems` registry, runs
-  the rAF loop, exposes the public API by delegating to systems. See `scourge-survivors/src/game/Game.ts`.
+  the rAF loop, exposes the public API by delegating to systems. See `games/scourge-survivors/src/game/Game.ts`.
 - **GameContext** = the shared mutable world (renderer, scene, camera, controls, clock,
   raycaster, collision arrays, entity pools, current map, status/outcome). Constructed
-  with `(container: HTMLElement, listener: StateListener)`. See `scourge-survivors/src/game/context.ts`.
+  with `(container: HTMLElement, listener: StateListener)`. See `games/scourge-survivors/src/game/context.ts`.
 - **GameSystems** = a registry interface. Each system is `new XSystem(ctx, sys)` and calls
   siblings via `this.sys.<name>`. Construction order is irrelevant. Use **type-only imports**
-  in the registry to avoid runtime cycles. See `scourge-survivors/src/game/systems.ts`.
+  in the registry to avoid runtime cycles. See `games/scourge-survivors/src/game/systems.ts`.
 - Systems grouped in folders: `render/`, `entities/`, `modes/`, `systems/`.
 - Content is **data-driven**: tunables in `constants.ts`, content tables in `data/*.ts`.
 - UI: systems push a `HUDState` snapshot to React via the `StateListener`; React renders
@@ -65,7 +65,7 @@ agreed, then exit plan mode and build top-down.
 
 ## Step 2 — Scaffold the repo
 
-One repo per game (e.g. `shipshitgames/<game>`). Match `scourge-survivors/package.json`: Vite +
+One repo per game (e.g. `shipshitgames/<game>`). Match `games/scourge-survivors/package.json`: Vite +
 TS + Three.js for the game, React + Tailwind v4 + Radix/shadcn for the shell ONLY, PartyKit
 for multiplayer. The game `package.json` name is the game (e.g. `fps-arena`). Scripts:
 
@@ -99,7 +99,7 @@ party/arena.ts          # PartyKit room server
 assets.json             # asset manifest (single source of truth)
 ```
 
-The `Game.start()` body literally is the build order — see `scourge-survivors/src/game/Game.ts:54`:
+The `Game.start()` body literally is the build order — see `games/scourge-survivors/src/game/Game.ts:54`:
 `setupRenderer -> setupScene -> buildArena -> buildWeapon -> bindEvents -> resetPlayer ->
 startWaveSystem -> hud.emit -> loop`.
 
@@ -118,7 +118,7 @@ feature whose dependency isn't visibly working. Canonical order:
 5. **Combat** — `WeaponSystem` (raycast hits via `ctx.raycaster`/`ctx.raycastTargets`),
    `ProjectilesSystem`, damage/death. The core loop is now playable.
 6. **HUD** — `HudSystem.emit()` pushes `HUDState`; `HUD.tsx` renders health/ammo/score/banners.
-   → load **shipshit-engine** for the StateListener pattern; see `scourge-survivors/src/game/types.ts`.
+   → load **shipshit-engine** for the StateListener pattern; see `games/scourge-survivors/src/game/types.ts`.
 7. **Juice** — `FxSystem`: muzzle flash, hit markers, damage numbers, banners, screen feel.
 8. **Audio** — `AudioEngine` sfx hooks from systems (`audio.sfx('hit')`).
 9. **Multiplayer** (only if in the PRD) — `MultiplayerSystem` + `party/arena.ts`.
@@ -148,7 +148,7 @@ by id, never by hardcoded path. Keep gameplay logic free of asset URLs.
 
 ## Step 6 — Deploy
 
-Two pieces (see `scourge-survivors/DEPLOY.md`):
+Two pieces (see `games/scourge-survivors/DEPLOY.md`):
 
 ```bash
 # 1. Multiplayer room server (only if the game has multiplayer)
@@ -177,7 +177,7 @@ Single-player works with just the Vercel front end; multiplayer needs PartyKit.
 - Work one feature per focused session; commit at each green playtest so state is recoverable.
 - When the context gets heavy, summarize "what's working / what's next" into the PRD's
   checklist rather than trusting recall.
-- Reference canonical files by path (`scourge-survivors/src/game/Game.ts`) instead of pasting them;
+- Reference canonical files by path (`games/scourge-survivors/src/game/Game.ts`) instead of pasting them;
   re-read on demand.
 - One system per file keeps each unit small enough to load without dragging in the world.
 
@@ -223,7 +223,7 @@ Single-player works with just the Vercel front end; multiplayer needs PartyKit.
 1. `docs/PRD.md`: FPS arena, core loop "clear waves + boss on one map", win/lose, WASD+mouse,
    v1 = Campaign only, cut list = Survivors/Multiplayer/shop.
 2. Plan mode: agree the 9-feature order above. Exit plan mode.
-3. Scaffold matching `scourge-survivors/package.json`; empty systems registered in `systems.ts`.
+3. Scaffold matching `games/scourge-survivors/package.json`; empty systems registered in `systems.ts`.
 4. Feature 1 (Arena): `RenderSystem` + `ArenaSystem` from a single map in `data/maps.ts`.
    Playwright: launch, screenshot — a lit room appears. Commit.
 5. Feature 2-3 (Input + movement): pointer lock, WASD, collisions. Playwright: walk around. Commit.

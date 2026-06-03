@@ -26,7 +26,7 @@ library (TypeScript, React, Turborepo, shadcn, etc.), which the studio monorepo 
 - **Data-driven** content: `constants.ts` + `data/*.ts`; logic never hardcodes content.
 - `assets.json` manifest is the single source of truth for assets.
 - **PartyKit** (Cloudflare) for multiplayer.
-- Canonical reference implementation: the `fpsdemo` (first-person DOOM-like
+- Canonical reference implementation: `games/scourge-survivors` (first-person DOOM-like
   horde/survivors shooter).
 
 ## Skills (snapshot 2026-06-03)
@@ -40,6 +40,8 @@ library (TypeScript, React, Turborepo, shadcn, etc.), which the studio monorepo 
 | isometric-3d | Genre — orthographic isometric games + A* |
 | partykit-multiplayer | System — real-time multiplayer on PartyKit |
 | game-asset-pipeline | System — assets.json + AI gen → optimize → register |
+| sprite-concept-batches | System — lore-backed sprite concepts + prompt/history ledger |
+| sprite-asset-promotion | System — approved draft cutouts -> runtime sprite assets |
 | playwright-game-testing | System — agent-eyes visual test/self-fix loop |
 
 ## Architecture Decisions
@@ -51,7 +53,7 @@ system; `.claude/` and `.codex/` symlink into `.agents/`.
 
 ### Imperative Three.js, not R3F (2026-06-03)
 
-Preserve the `fpsdemo` architecture. Imperative Three.js has the largest LLM training
+Preserve the `games/scourge-survivors` architecture. Imperative Three.js has the largest LLM training
 corpus, and the system-registry already separates simulation from rendering.
 
 ### One-time lifetime access (2026-06-03)
