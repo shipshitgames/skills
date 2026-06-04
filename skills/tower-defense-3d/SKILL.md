@@ -27,7 +27,7 @@ TD is the **same engine, different mode**. Reuse `ArenaSystem`/maps for the neon
 | Projectiles | enemy shots at player | tower shots at creeps (same pool shape) |
 | Arena, maps, net, assets, HUD push | — | **unchanged conventions** |
 
-## File layout (game-local; promote shared bits to `@shipshit/engine` later)
+## File layout (game-local; promote shared bits to `@shipshitgames/engine` later)
 
 ```
 src/game/

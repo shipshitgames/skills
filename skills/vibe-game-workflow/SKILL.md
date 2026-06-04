@@ -17,7 +17,7 @@ and which sibling skill to load at each step. The proof is the FPS reference gam
 `games/scourge-survivors/` — cite it when in doubt.
 
 Read this top to bottom once, then drive the loop. Do NOT improvise architecture; every
-studio game shares the same shape so shared code can move into `@shipshit/engine`.
+studio game shares the same shape so shared code can move into `@shipshitgames/engine`.
 
 ## The one architecture (identical in every game)
 
@@ -181,11 +181,11 @@ Single-player works with just the Vercel front end; multiplayer needs PartyKit.
   re-read on demand.
 - One system per file keeps each unit small enough to load without dragging in the world.
 
-## Per-game repo + @shipshit/engine convention
+## Per-game repo + @shipshitgames/engine convention
 
 - Each game is its own repo under `shipshitgames/`. Shared cross-game code (the
   GameContext/GameSystems contract, loop helpers, loader, input, math) lives in the npm
-  package `@shipshit/engine` (still forming — `scourge-survivors` is its proof). Until it ships,
+  package `@shipshitgames/engine` (still forming — `scourge-survivors` is its proof). Until it ships,
   copy the patterns from `scourge-survivors`; when it lands, depend on it and delete the duplicates.
 - Genre skills (**fps-arena**, **tower-defense-3d**, **isometric-3d**) layer genre systems
   on top of the engine contract. Always load **shipshit-engine** + the one genre skill.

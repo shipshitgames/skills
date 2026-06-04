@@ -1,0 +1,32 @@
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+out/
+.next/
+.vercel/
+.turbo/
+.vite/
+.cache/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Package manager noise
+bun.lock
+bun.lockb
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+*.log
+
+# Local config and secrets
+.env
+.env.*
+!.env.example
+
+# OS and editor state
+.DS_Store
+.idea/
+.vscode/

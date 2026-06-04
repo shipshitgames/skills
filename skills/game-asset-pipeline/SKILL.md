@@ -38,7 +38,7 @@ the manifest fixes. When the size/frame data lives next to the path:
 - Anchor, color space, and wrap mode are declared once, not re-set at every call site.
 - Every asset carries a `license` record (see below).
 
-`@shipshit/engine` will export the `AssetCatalog`; scourge-survivors is the proof. New games
+`@shipshitgames/engine` will export the `AssetCatalog`; scourge-survivors is the proof. New games
 start manifest-first.
 
 ## File layout

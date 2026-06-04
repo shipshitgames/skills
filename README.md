@@ -17,7 +17,7 @@ Or copy a skill folder from `skills/` into your project's `.claude/skills/` (and
 These are the same skills we use to ship our open-source games. They teach the agent
 *our* architecture — imperative Three.js + a `GameContext` / `GameSystems` registry,
 data-driven content, PartyKit multiplayer, and an `assets.json`-driven pipeline — so it
-generates code that fits the `@shipshit/engine` conventions instead of generic
+generates code that fits the `@shipshitgames/engine` conventions instead of generic
 Three.js spaghetti.
 
 ### Foundation

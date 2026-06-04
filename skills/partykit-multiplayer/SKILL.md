@@ -320,7 +320,7 @@ Durable Object. Sharing the link *is* the invite flow.
   the host), then set `VITE_PARTYKIT_HOST=fps-arena.<username>.partykit.dev` as a **build-time**
   Vercel env var. Unset host in prod = single-player still works; "Join Room" just can't connect.
 
-## The `@shipshit/net` abstraction (keep the transport swappable)
+## The `@shipshitgames/net` abstraction (keep the transport swappable)
 
 Cloudflare acquired PartyKit; isolate the dependency so a future migration to raw Durable
 Objects or Colyseus is a one-file change:

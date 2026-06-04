@@ -1,6 +1,6 @@
 ---
 name: shipshit-engine
-description: The foundational @shipshit/engine architecture every Ship Shit Games title follows — the Game orchestrator + GameContext + GameSystems registry, the system folder layout, data-driven content, the rAF loop, dispose discipline, and the React-shell-for-HUD boundary. Load this FIRST when starting a new studio game or adding/extending any system in an existing one.
+description: The foundational @shipshitgames/engine architecture every Ship Shit Games title follows — the Game orchestrator + GameContext + GameSystems registry, the system folder layout, data-driven content, the rAF loop, dispose discipline, and the React-shell-for-HUD boundary. Load this FIRST when starting a new studio game or adding/extending any system in an existing one.
 license: MIT
 metadata:
   version: "0.1.0"
@@ -10,7 +10,7 @@ metadata:
 
 # shipshit-engine
 
-The architecture that EVERY studio game shares. Imperative Three.js for the game, React + Tailwind only for the HUD/menu shell. This is the skeleton `@shipshit/engine` will encode; the proof implementation is `scourge-survivors` (cited throughout). Read those files before writing — match them exactly.
+The architecture that EVERY studio game shares. Imperative Three.js for the game, React + Tailwind only for the HUD/menu shell. This is the skeleton `@shipshitgames/engine` will encode; the proof implementation is `scourge-survivors` (cited throughout). Read those files before writing — match them exactly.
 
 ## The three pillars
 
