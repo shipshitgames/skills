@@ -57,6 +57,24 @@ Pin the design so scope can't drift mid-stream. Put it in `docs/PRD.md`:
 Rules: one core loop, one mode, one map for v1. Everything else goes on the cut list.
 A TinyPRD that fits on a screen is the strongest scope-discipline tool you have.
 
+### Which spec layer to write (game vs feature vs non-trivial)
+
+The TinyPRD scopes a whole **game**. For everything after — features, bugs, follow-ups —
+drop to the right layer instead of bloating the PRD. An agent's implementation guidance
+comes from this skill + **shipshit-engine**, never from prose in the spec; so keep every
+spec to scope + testable acceptance criteria and let the architecture carry the rest.
+
+| You're defining… | Write | Where | Skill |
+|---|---|---|---|
+| A new game's v1 | **TinyPRD** (one screen) | `docs/PRD.md` | this skill, Step 0 |
+| One feature / bug / enhancement | **Feature PRD** — Problem → Goal → Scope → Acceptance → Tech notes | GitHub issue | **task-prd-creator** |
+| A non-trivial feature (3+ files / fuzzy reqs) | **Spec** — spec.md + todo.md + decisions.md, before code | repo | **spec-first** |
+| A trivial change (< 50 lines, one file) | nothing — just do it | — | — |
+
+What raises agent success isn't length — it's testable acceptance criteria, a "files likely
+affected" + pattern-to-follow pointer, an explicit out-of-scope, and a link to canon
+(`loreId`) + the relevant skill. Padding rots; precision ships.
+
 ## Step 1 — Plan-first
 
 Enter **plan mode** and produce a feature-ordered build plan derived from the PRD. Do not
@@ -240,3 +258,5 @@ Single-player works with just the Vercel front end; multiplayer needs PartyKit.
 - **partykit-multiplayer** — the multiplayer feature step.
 - **game-asset-pipeline** — generate art + the `assets.json` manifest (Step 5).
 - **playwright-game-testing** — the per-feature playtest loop (Step 4).
+- **task-prd-creator** — write the Feature PRD (GitHub issue) for a single feature/bug/enhancement.
+- **spec-first** — spec → plan → execute → verify for a non-trivial feature (3+ files / fuzzy reqs).
