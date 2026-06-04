@@ -34,6 +34,7 @@ Three.js spaghetti.
 - **[game-asset-pipeline](./skills/game-asset-pipeline)** — `assets.json` manifest + AI gen → optimize → register.
 - **[sprite-concept-batches](./skills/sprite-concept-batches)** — lore-backed concept batches + prompt/history ledger.
 - **[sprite-asset-promotion](./skills/sprite-asset-promotion)** — promote approved sprite drafts into game-ready assets.
+- **[sprite-animation-gyms](./skills/sprite-animation-gyms)** — video-gen animation (1s-clip rule), pixel-snapping, and the gym QA harness + level-editor pattern.
 - **[playwright-game-testing](./skills/playwright-game-testing)** — give the agent eyes: screenshot, assert, self-fix.
 
 ## Repo layout
