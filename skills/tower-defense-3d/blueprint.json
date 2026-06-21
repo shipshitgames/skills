@@ -1,0 +1,29 @@
+{
+  "gameType": "tower-defense",
+  "genreAliases": [
+    "tower-defense (3d)",
+    "tower defense",
+    "tower-defense",
+    "3d tower defense",
+    "td",
+    "lane defense"
+  ],
+  "assetClasses": [
+    { "category": "sprite", "items": ["1 tower archetype (base + rotating turret)", "4 creeps (shambler / ripper / hulk / boss)", "3 projectiles (bolt / orb / shell)", "lane board (11x7 grid + snaking path)"], "mvp": true },
+    { "category": "ui", "items": ["gold counter", "wave counter", "base HP bar", "tower-select icons", "wave banner"], "mvp": true },
+    { "category": "vfx", "items": ["creep kill-pop", "mortar splash bloom", "tower build glow", "breach-damage flash"], "mvp": true },
+    { "category": "music", "items": ["gameplay loop", "tower-fire SFX", "creep-hit SFX", "wave-announce SFX"], "mvp": true },
+    { "category": "sprite", "items": ["extra tower archetypes (stasis / mortar)", "more creep types"], "mvp": false },
+    { "category": "music", "items": ["boss theme"], "mvp": false },
+    { "category": "ui", "items": ["title / menu", "victory / defeat screens", "codex bestiary cards"], "mvp": false }
+  ],
+  "mvpSlice": [
+    "1 tower archetype (raycast place on the grid, cost + range)",
+    "creep pathfinding on the lane (shambler / ripper / hulk / boss)",
+    "projectile collision + hit detection",
+    "10-wave director with scaling difficulty",
+    "HUD: gold, wave counter, base HP",
+    "1 gameplay music loop + fire / hit / wave SFX",
+    "1 lane board (11x7 grid + snaking path)"
+  ]
+}
