@@ -1,0 +1,22 @@
+{
+  "gameType": "moba",
+  "genreAliases": ["moba", "lane moba", "one-lane moba", "lane-based pvp", "lane pvp", "moba lane"],
+  "assetClasses": [
+    { "category": "sprite", "items": ["Pyre champion (isometric)", "Warden enemy champion", "Pyre + Warden minion squads", "2 towers per team", "Scourge neutral objective", "base structures"], "mvp": true },
+    { "category": "ui", "items": ["health bar", "mana pool", "Q/W/E cooldown indicators", "minimap / lane overview", "game-over modal"], "mvp": true },
+    { "category": "vfx", "items": ["hit bursts", "ability telegraphs (Q line, W zone)", "slow cloud", "dash trail", "death bursts", "tower destruction"], "mvp": true },
+    { "category": "music", "items": ["gameplay loop", "ability cast SFX (Q/W/E)", "minion + champion death SFX", "tower destruction SFX"], "mvp": true },
+    { "category": "music", "items": ["main-menu theme", "Scourge-alert theme"], "mvp": false },
+    { "category": "ui", "items": ["main menu", "settings", "victory / defeat"], "mvp": false }
+  ],
+  "mvpSlice": [
+    "champion movement + isometric follow-cam",
+    "minion wave spawning (Pyre + Warden)",
+    "auto-attack combat (champ vs minions / towers / enemy)",
+    "3 abilities (Q/W/E) with cooldowns + mana",
+    "2 towers per team with health states",
+    "Scourge neutral objective (buff on kill)",
+    "win condition: topple enemy base after towers fall",
+    "HUD: health / mana / ability cooldowns / minimap"
+  ]
+}

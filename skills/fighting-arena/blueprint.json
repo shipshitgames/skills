@@ -1,0 +1,22 @@
+{
+  "gameType": "fighting",
+  "genreAliases": ["fighting", "brawler", "fighter", "trench brawler", "battlefield fighter", "arena fighter", "platform fighter"],
+  "assetClasses": [
+    { "category": "sprite", "items": ["4 fighters (Pyre Duelist / Warden Bastion / Render / Trucebreaker)", "pose sheets: idle / walk / jump / crouch / guard / attack / hurt / knockback / KO / win"], "mvp": true },
+    { "category": "ui", "items": ["health bars", "damage percent", "stock pips", "KO timer", "fighter-select cards"], "mvp": true },
+    { "category": "vfx", "items": ["hit-flash", "screen-shake", "sparks", "knockback dust"], "mvp": true },
+    { "category": "music", "items": ["combat loop", "light / heavy / special hit SFX", "guard-block tone"], "mvp": true },
+    { "category": "music", "items": ["menu theme", "victory sting"], "mvp": false },
+    { "category": "ui", "items": ["main menu", "results", "mode toggle"], "mvp": false }
+  ],
+  "mvpSlice": [
+    "4 fighters with combat pose sheets",
+    "fighter-select UI + Duel / Arena mode toggle",
+    "Duel mode (1v1 KO, timer, AI opponent)",
+    "Arena mode (damage%-knockback, stocks, ring-outs)",
+    "light / heavy / special attacks with cooldown gating",
+    "guard blocking + knockback physics",
+    "hit feedback: flash, screen-shake, sparks",
+    "win/loss result + Warline telemetry; HUD health/damage%/stocks"
+  ]
+}

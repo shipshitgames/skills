@@ -1,0 +1,22 @@
+{
+  "gameType": "side-scroller",
+  "genreAliases": ["side-scroller", "side scroller", "infiltration platformer", "precision platformer", "mario-like", "saboteur platformer"],
+  "assetClasses": [
+    { "category": "sprite", "items": ["hero (idle / run / jump / hurt)", "3 enemies (blood-blob / spitter / charger)", "projectiles", "static + moving platforms", "acid / spike hazards", "embers"], "mvp": true },
+    { "category": "ui", "items": ["lives (x3)", "HP bar", "objective text", "progress bar", "ember counter"], "mvp": true },
+    { "category": "vfx", "items": ["stomp pop", "acid splash", "hit flash"], "mvp": true },
+    { "category": "music", "items": ["gameplay loop", "jump / stomp / hurt / ember SFX"], "mvp": true },
+    { "category": "music", "items": ["escape-phase theme"], "mvp": false },
+    { "category": "ui", "items": ["title", "level-complete", "game-over"], "mvp": false }
+  ],
+  "mvpSlice": [
+    "hero platformer physics (jump / land / coyote)",
+    "static AABB + moving-platform carry collision",
+    "3 enemies (patrol / lobber / dash)",
+    "stomp-kill mechanic",
+    "acid / spike hazards",
+    "phases: infiltrate -> core ignition -> escape",
+    "2 campaign levels",
+    "HUD: lives, HP, objective, progress, embers"
+  ]
+}

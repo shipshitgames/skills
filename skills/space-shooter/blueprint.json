@@ -1,0 +1,22 @@
+{
+  "gameType": "space-shooter",
+  "genreAliases": ["space-shooter", "space shooter", "arcade-pilot", "arcade pilot survivors", "twin-stick", "twin-stick flight", "top-down shooter", "top-down survivors"],
+  "assetClasses": [
+    { "category": "sprite", "items": ["player interceptor ship", "5 enemy types (grunt / swarmling / weaver / spitter / elite)", "1 boss (3-phase)"], "mvp": true },
+    { "category": "ui", "items": ["XP bar", "integrity / HP bar", "upgrade cards", "boss health bar"], "mvp": true },
+    { "category": "vfx", "items": ["kill-pop particles", "screen-shake trauma", "thruster trails", "boss-phase bursts", "parallax starfield"], "mvp": true },
+    { "category": "music", "items": ["ambience loop", "weapon-fire SFX", "hit-impact SFX"], "mvp": true },
+    { "category": "music", "items": ["victory track", "boss theme"], "mvp": false },
+    { "category": "ui", "items": ["main menu", "drydock shop", "results screen"], "mvp": false }
+  ],
+  "mvpSlice": [
+    "mouse-follow ship + top-down camera (parallax starfield)",
+    "5 enemy types via an auto-escalating director",
+    "auto-fire weapons (5 weapons, tier-1)",
+    "enemy -> XP gem -> magnet-to-ship loop",
+    "level-up draft (1-of-3 upgrade pick)",
+    "3-phase boss + run timer to spawn",
+    "drydock meta-shop (run-start stats)",
+    "HUD: XP bar, integrity, upgrade cards, boss health"
+  ]
+}
