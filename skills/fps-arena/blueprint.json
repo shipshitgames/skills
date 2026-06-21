@@ -1,0 +1,34 @@
+{
+  "gameType": "horde-shooter",
+  "genreAliases": [
+    "horde shooter",
+    "first-person horde shooter",
+    "fps",
+    "fps arena",
+    "first-person arena",
+    "arena shooter",
+    "survivors",
+    "vampire survivors",
+    "horde survivor",
+    "wave shooter",
+    "bullet heaven"
+  ],
+  "assetClasses": [
+    { "category": "sprite", "items": ["playable operator (front-facing)", "3 enemy archetypes: melee / ranged / flying (3 anim frames each)", "boss"], "mvp": true },
+    { "category": "ui", "items": ["health bar", "ammo count", "XP bar", "upgrade cards", "wave counter"], "mvp": true },
+    { "category": "vfx", "items": ["kill-pop particles", "damage flash", "screen shake"], "mvp": true },
+    { "category": "music", "items": ["gameplay loop", "pistol SFX", "sniper SFX", "hit-impact SFX"], "mvp": true },
+    { "category": "sprite", "items": ["additional enemy archetypes", "weapon-tier sheets", "pickups / gems"], "mvp": false },
+    { "category": "music", "items": ["menu theme", "boss theme"], "mvp": false },
+    { "category": "ui", "items": ["main menu", "pause", "game-over / results", "shop / drydock"], "mvp": false }
+  ],
+  "mvpSlice": [
+    "1 playable operator (front-facing FPS sprite)",
+    "3 enemy archetypes (melee / ranged / flying), waves 1-10",
+    "auto-fire weapons (pistol + sniper, tier-1)",
+    "kill -> XP -> level-up draft (1-of-3 upgrade pick)",
+    "HUD: health, ammo, XP bar, wave counter, upgrade cards",
+    "1 gameplay music loop + pistol / sniper / hit SFX",
+    "VFX: kill-pop, damage flash, screen shake"
+  ]
+}
