@@ -1,6 +1,6 @@
 ---
 name: side-scroller
-description: Build an infiltration side-scroller platformer (Mario-like) — precise single-saboteur platforming with enemies, stomp-kills, moving platforms, hazards, and infiltrate→escape level phases. Canonical game: Rothulk.
+description: Build an infiltration side-scroller platformer (Mario-like) — precise single-saboteur platforming with enemies, stomp-kills, moving platforms, hazards, and infiltrate→escape level phases. Canonical game — Rothulk.
 license: MIT
 metadata:
   version: "0.1.0"

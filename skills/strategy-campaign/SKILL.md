@@ -1,6 +1,6 @@
 ---
 name: strategy-campaign
-description: Build a strategy-lite persistent campaign layer — a 3D portal-deck lobby, an SVG war-map command table, four-resource economy, Fortify/Muster/Deploy/Recon commands, faction pressure rings, and a LOCAL tick-loop that upgrades to LIVE PartyKit. Canonical game: Warline.
+description: Build a strategy-lite persistent campaign layer — a 3D portal-deck lobby, an SVG war-map command table, four-resource economy, Fortify/Muster/Deploy/Recon commands, faction pressure rings, and a LOCAL tick-loop that upgrades to LIVE PartyKit. Canonical game — Warline.
 license: MIT
 metadata:
   version: "0.1.0"

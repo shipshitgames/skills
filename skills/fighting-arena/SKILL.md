@@ -1,6 +1,6 @@
 ---
 name: fighting-arena
-description: Build a trench-brawler / battlefield fighting game — character select, 1v1 Duels and 2-4 player Arenas, light/heavy/special combos with cooldown gating, guard + damage-percent knockback, and Warline result banking. Canonical game: Brawl.
+description: Build a trench-brawler / battlefield fighting game — character select, 1v1 Duels and 2-4 player Arenas, light/heavy/special combos with cooldown gating, guard + damage-percent knockback, and Warline result banking. Canonical game — Brawl.
 license: MIT
 metadata:
   version: "0.1.0"

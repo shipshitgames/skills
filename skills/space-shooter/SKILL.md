@@ -1,6 +1,6 @@
 ---
 name: space-shooter
-description: Build a top-down arcade-pilot "survivors" space shooter — mouse-follow flight, an auto-escalating Scourge horde, stacking auto-fire weapons, XP-gem drafts, a multi-phase boss, and drydock meta-progression. Canonical game: Starblight.
+description: Build a top-down arcade-pilot "survivors" space shooter — mouse-follow flight, an auto-escalating Scourge horde, stacking auto-fire weapons, XP-gem drafts, a multi-phase boss, and drydock meta-progression. Canonical game — Starblight.
 license: MIT
 metadata:
   version: "0.1.0"

@@ -1,6 +1,6 @@
 ---
 name: platformer-runner
-description: Build a high-speed side-on courier platformer (Sonic-like) — flow-state running, coyote/jump-buffer physics, seeded procedural courses, spike/bar/gap hazards, a speed-ember chain multiplier, and time/score scoring. Canonical game: Redline.
+description: Build a high-speed side-on courier platformer (Sonic-like) — flow-state running, coyote/jump-buffer physics, seeded procedural courses, spike/bar/gap hazards, a speed-ember chain multiplier, and time/score scoring. Canonical game — Redline.
 license: MIT
 metadata:
   version: "0.1.0"
