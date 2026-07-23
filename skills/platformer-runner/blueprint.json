@@ -1,0 +1,22 @@
+{
+  "gameType": "platformer-runner",
+  "genreAliases": ["platformer-runner", "courier platformer", "high-speed platformer", "speed platformer", "sonic-like", "auto-runner"],
+  "assetClasses": [
+    { "category": "sprite", "items": ["courier (run / jump / air / dash / hit frames, side-on)", "platforms + ramps", "spike / bar / gap hazards", "speed embers", "beacon finish"], "mvp": true },
+    { "category": "ui", "items": ["speed gauge", "time counter", "score", "chain badge", "progress bar"], "mvp": true },
+    { "category": "vfx", "items": ["speed lines", "dash burst", "ember-collect pop", "near-miss spark"], "mvp": true },
+    { "category": "music", "items": ["gameplay loop", "jump SFX (variable pitch)", "land / hurt / gem / victory SFX"], "mvp": true },
+    { "category": "music", "items": ["menu theme"], "mvp": false },
+    { "category": "ui", "items": ["title", "results", "leaderboard"], "mvp": false }
+  ],
+  "mvpSlice": [
+    "physics: jump + land + friction + coyote/jump-buffer",
+    "seeded procedural course generation",
+    "hazards: spike (jump), bar (roll-under), gap (fall)",
+    "platforms with ramps (launch conversions)",
+    "speed embers -> chain multiplier (max 5x)",
+    "beacon finish + victory",
+    "HUD: speed gauge, time, score, chain, progress",
+    "1 courier sprite set"
+  ]
+}

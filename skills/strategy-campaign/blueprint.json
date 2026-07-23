@@ -1,0 +1,22 @@
+{
+  "gameType": "strategy-campaign",
+  "genreAliases": ["strategy-campaign", "strategy-lite", "campaign layer", "strategy campaign", "meta-layer", "war campaign", "lane strategy"],
+  "assetClasses": [
+    { "category": "sprite", "items": ["3D portal-deck lobby (PBR floor / wall / block / column / decal)", "portal-bay billboards"], "mvp": true },
+    { "category": "ui", "items": ["header HUD (threat / epoch / tick)", "ResourceBar (4 resources + army)", "CommandPanel (Fortify / Muster / Deploy / Recon)", "OpsPanel", "Legend", "SVG region / lane / breach overlays", "faction badges"], "mvp": true },
+    { "category": "vfx", "items": ["pressure rings (dithered / concentric)", "faction color coding (Pyre / Warden / Scourge / neutral)"], "mvp": true },
+    { "category": "music", "items": ["ambient lobby loop"], "mvp": true },
+    { "category": "ui", "items": ["title splash", "settings"], "mvp": false },
+    { "category": "music", "items": ["alert sting"], "mvp": false }
+  ],
+  "mvpSlice": [
+    "3D portal-deck lobby (5 PBR textures, portal bays)",
+    "3D ambient lighting (hemisphere + directional)",
+    "Command Table hologram (SVG war map: regions / lanes / breaches)",
+    "pressure rings + faction color coding",
+    "header HUD + ResourceBar (4 resources)",
+    "CommandPanel (Fortify / Muster / Deploy / Recon with costs)",
+    "dual-runtime: LOCAL tick-loop + LIVE PartyKit-ready",
+    "title screen (Enter the Front / Command Table)"
+  ]
+}

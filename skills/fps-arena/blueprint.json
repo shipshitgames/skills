@@ -3,15 +3,13 @@
   "genreAliases": [
     "horde shooter",
     "first-person horde shooter",
+    "horde-survivors shooter",
     "fps",
     "fps arena",
     "first-person arena",
     "arena shooter",
-    "survivors",
-    "vampire survivors",
     "horde survivor",
-    "wave shooter",
-    "bullet heaven"
+    "wave shooter"
   ],
   "assetClasses": [
     { "category": "sprite", "items": ["playable operator (front-facing)", "3 enemy archetypes: melee / ranged / flying (3 anim frames each)", "boss"], "mvp": true },
