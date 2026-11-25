@@ -1,10 +1,12 @@
 ---
-version: 0.1.0
-name: Ship Shit Games
+version: "0.1.0"
+name: "Ship Shit Games Skills"
 description: >-
-  DOOM-grade visual identity for the Ship Shit Games universe — brutal, metal,
-  blood, and hellfire. Dark, heavy, high-contrast. Not neon, not clean sci-fi.
+  Visual identity for Ship Shit Games skills and agent-facing resources:
+  brutal, readable, black-metal studio documentation with blood/hellfire
+  accents and medium-chunky game-asset references.
 colors:
+  primary: "#c1121f"
   void: "#0a0a0a"
   coal: "#121214"
   iron: "#1e1e22"
@@ -42,37 +44,83 @@ elevation:
   flat: "none"
   ember: "0 0 0 1px rgba(255,106,0,0.35), 0 0 26px -6px rgba(193,18,31,0.65)"
 components:
-  button.primary:
-    background: "{colors.blood}"
-    color: "{colors.bone}"
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.bone}"
+    typography: "{typography.display}"
     rounded: "{rounded.sm}"
-    hoverShadow: "{elevation.ember}"
-  button.ghost:
-    border: "{colors.hellfire}"
-    color: "{colors.hellfire}"
+    padding: "12px 16px"
+  button-secondary:
+    backgroundColor: "{colors.hellfire}"
+    textColor: "{colors.void}"
+    typography: "{typography.display}"
     rounded: "{rounded.sm}"
+    padding: "12px 16px"
   card:
-    background: "{colors.coal}"
-    border: "{colors.gunmetal}"
+    backgroundColor: "{colors.coal}"
+    textColor: "{colors.bone}"
     rounded: "{rounded.sm}"
-  badge.playable: { border: "{colors.hellfire}", color: "{colors.hellfire}" }
-  badge.inDev: { border: "{colors.blood}", color: "{colors.blood}" }
-  badge.concept: { border: "{colors.gunmetal}", color: "{colors.ash}" }
+    padding: "24px"
+  panel-raised:
+    backgroundColor: "{colors.iron}"
+    textColor: "{colors.bone}"
+    rounded: "{rounded.sm}"
+    padding: "16px"
+  panel-metal:
+    backgroundColor: "{colors.gunmetal}"
+    textColor: "{colors.bone}"
+    rounded: "{rounded.none}"
+    padding: "16px"
+  terminal:
+    backgroundColor: "{colors.void}"
+    textColor: "{colors.ash}"
+    typography: "{typography.mono}"
+    rounded: "{rounded.sm}"
+    padding: "16px"
+  badge-blood:
+    backgroundColor: "{colors.blood}"
+    textColor: "{colors.bone}"
+    typography: "{typography.display}"
+    rounded: "{rounded.sm}"
+    padding: "4px 8px"
+  badge-hot:
+    backgroundColor: "{colors.bloodHot}"
+    textColor: "{colors.void}"
+    typography: "{typography.display}"
+    rounded: "{rounded.sm}"
+    padding: "4px 8px"
+  badge-rust:
+    backgroundColor: "{colors.rust}"
+    textColor: "{colors.bone}"
+    typography: "{typography.display}"
+    rounded: "{rounded.sm}"
+    padding: "4px 8px"
+  badge-toxic:
+    backgroundColor: "{colors.toxic}"
+    textColor: "{colors.void}"
+    typography: "{typography.display}"
+    rounded: "{rounded.sm}"
+    padding: "4px 8px"
+pixelArt:
+  medium: "high-detail medium-chunky pixel art"
+  gridHeight: "110px"
+  rendering: "visible square pixels, hard crisp edges, no anti-aliasing"
+  shading: "ordered dithering, subtle dark outline, hellfire-to-blood rim light"
+  palette: "void, coal, gunmetal, blood, rust, bone, hellfire; toxic only for Scourge assets"
 ---
 
-# Overview
+## Overview
 
-The single source of design truth for **everything** — the website, every game's HUD and
-menus, and every AI-generated asset. The aesthetic is **DOOM**: brutal, metal, blood, and
-hellfire. Dark, heavy, gritty, high-contrast. This supersedes the earlier "neon-industrial"
-direction — there is **no magenta/cyan neon**. An agent that reads this file should produce
-black-void surfaces, gunmetal panels, bone headlines in heavy uppercase Oswald, and
-blood-red call-to-action buttons with an ember glow. The lore [[Style-Bible]] points here.
+The design contract for Ship Shit Games skills and agent-facing documentation.
+Use the same brutal studio palette as shipshit.games: black-void surfaces,
+gunmetal panels, bone headings, Oswald display labels, and blood/hellfire
+actions. Keep the work surface readable and utilitarian.
 
 ## Colors
 
 | Token | Hex | Use |
 |-------|-----|-----|
+| `primary` | `#c1121f` | machine-readable primary alias for blood |
 | `void` | `#0a0a0a` | page / scene background |
 | `coal` | `#121214` | panels, cards |
 | `iron` | `#1e1e22` | raised surfaces |
@@ -112,10 +160,12 @@ Rule: **red + fire + metal + bone.** Toxic-green is reserved for the Scourge. Ne
 
 ## Components
 
-- **button.primary** — `blood` bg, `bone` text, `rounded.sm`, `ember` glow on hover. Main CTA.
-- **button.ghost** — transparent, `hellfire` border + text. Secondary (e.g. "Source").
-- **card** — `coal` bg, `gunmetal` border, `rounded.sm`; hover border → `blood`.
-- **badge** — `playable` = hellfire, `inDev` = blood, `concept` = gunmetal/ash.
+- **button-primary** — `primary` bg, `bone` text, `rounded.sm`. Main CTA.
+- **button-secondary** — `hellfire` bg, `void` text, `rounded.sm`. Secondary hot action.
+- **card** — `coal` bg, `bone` text, `rounded.sm`; border in implementation should use `gunmetal`.
+- **panel-raised / panel-metal** — `iron` or `gunmetal` surfaces for docs and chrome.
+- **terminal** — `void` bg, `ash` mono text, `rounded.sm`.
+- **badge** — `blood`, `bloodHot`, `rust`, and `toxic` variants for status and tags.
 
 ## Do's and Don'ts
 
